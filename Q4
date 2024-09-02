@@ -1,3 +1,26 @@
 Laura Roni Rocio
 lronirocio@outlook.com
 QUESTÃO 4(feita no onlinegdb)
+#include <stdio.h>
+
+#define es 27165.48
+#define rj 36678.66
+#define mg 29229.88
+#define sp 67836.43
+#define outros 19849.53
+
+int main() {
+    
+    
+    float total = sp + mg + rj + es + outros;
+
+
+    printf("Percentual de representação de cada estado:\n");
+    printf("SP: %.2f%%\n", (sp / total) * 100);
+    printf("RJ: %.2f%%\n", (rj / total) * 100);
+    printf("MG: %.2f%%\n", (mg / total) * 100);
+    printf("ES: %.2f%%\n", (es / total) * 100);
+    printf("Outros: %.2f%%\n", (outros / total) * 100);
+
+    return 0;
+}
