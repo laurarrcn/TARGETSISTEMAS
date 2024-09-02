@@ -1,0 +1,32 @@
+Laura Roni Rocio
+lronirocio@outlook.com
+QUESTÃO 3(feita no onlinegdb)
+#include <stdio.h>
+#include <string.h>
+
+void stringInvertida(char str[], int inicio, int fim) {
+    
+    if (inicio >= fim){
+        return;}
+    
+    char aux = str[inicio];
+    str[inicio] = str[fim];
+    str[fim] = aux;
+
+    stringInvertida(str, inicio + 1, fim - 1);
+    
+}
+
+int main() {
+    
+    char str[50];
+
+    printf("Informe a string a ser invertida: ");
+    scanf("%s", str);
+
+    stringInvertida(str, 0, strlen(str) - 1);
+    printf("String invertida: %s\n", str);
+
+    return 0;
+    
+}
