@@ -1,32 +1,36 @@
 Laura Roni Rocio
 lronirocio@outlook.com
-QUESTÃO 3(feita no onlinegdb)
-#include <stdio.h>
-#include <string.h>
-
-void stringInvertida(char str[], int inicio, int fim) {
-    
-    if (inicio >= fim){
-        return;}
-    
-    char aux = str[inicio];
-    str[inicio] = str[fim];
-    str[fim] = aux;
-
-    stringInvertida(str, inicio + 1, fim - 1);
-    
+QUESTÃO 3
+faturamento.json
+{
+  "faturamento": [1000, 1200, 0, 800, 0, 1500, 1000, 2000, 0, 1200]
 }
 
-int main() {
-    
-    char str[50];
-
-    printf("Informe a string a ser invertida: ");
-    scanf("%s", str);
-
-    stringInvertida(str, 0, strlen(str) - 1);
-    printf("String invertida: %s\n", str);
-
-    return 0;
-    
+function encontrarMenor(faturamento) {
+  return Math.min(...faturamento.filter(valor => valor > 0));
 }
+
+function encontrarMaior(faturamento) {
+  return Math.max(...faturamento);
+}
+function calcularMedia(faturamento) {
+  const diasValidos = faturamento.filter(valor => valor > 0);
+  const soma = diasValidos.reduce((acc, valor) => acc + valor, 0);
+  return diasValidos.length > 0 ? soma / diasValidos.length : 0;
+}
+function contarDiasAcimaMedia(faturamento, media) {
+  return faturamento.filter(valor => valor > media).length;
+}
+const dadosFaturamento = {
+  faturamento: [1000, 1200, 0, 800, 0, 1500, 1000, 2000, 0, 1200],
+};
+const faturamento = dadosFaturamento.faturamento;
+const menor = encontrarMenor(faturamento);
+const maior = encontrarMaior(faturamento);
+const media = calcularMedia(faturamento);
+const diasAcimaMedia = contarDiasAcimaMedia(faturamento, media);
+
+console.log(`O menor valor é: ${menor}`);
+console.log(`O maior valor é: ${maior}`);
+console.log(`Dias acima da média: ${diasAcimaMedia}`);
+
