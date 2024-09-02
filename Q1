@@ -1,0 +1,6 @@
+Laura Roni Rocio
+lronirocio@outlook.com
+QUESTÃO 1
+/*Observe o trecho de código abaixo: int INDICE = 13, SOMA = 0, K = 0; Enquanto K < INDICE faça { K = K + 1; SOMA = SOMA + K; } Imprimir(SOMA); Ao final do processamento, qual será o valor da variável SOMA?*/
+O resultado de 'SOMA' deverá ser de 91, uma vez que po código soma valores de 1 até 13, ou seja, calcula a soma dos primeiros 13 números naturais.
+'K' é setado como 0 e é incrementado até 13. 'SOMA' é setado como 0 e a cada iteração, é somado o valor de 'K', assim, chegamos a 91.
